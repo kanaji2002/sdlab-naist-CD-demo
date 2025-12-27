@@ -24,8 +24,8 @@ jobs:
               - 'README.md'
 
   ci:
-    needs: changes
-    if: needs.changes.outputs.docs_only != 'true'
+    needs: docs-only
+    if: needs.docs-only.outputs.docs_only != 'true'
     runs-on: ubuntu-latest
 
     steps:
