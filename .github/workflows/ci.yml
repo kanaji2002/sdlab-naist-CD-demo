@@ -8,7 +8,7 @@ on:
       - develop
 
 jobs:
-  changes:
+  docs-only:
     runs-on: ubuntu-latest
     outputs:
       docs_only: ${{ steps.filter.outputs.docs_only }}
