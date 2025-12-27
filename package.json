@@ -3,10 +3,10 @@
   "version": "0.5.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "eslint ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.9.4",
@@ -19,6 +19,7 @@
     "@babel/eslint-parser": "^7.25.0",
     "@babel/preset-react": "^7.25.0",
     "@eslint/js": "^9.39.2",
+    "@playwright/test": "^1.57.0",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
     "eslint-plugin-react": "^7.37.0",

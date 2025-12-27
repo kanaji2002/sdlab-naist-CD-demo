@@ -46,3 +46,32 @@ jobs:
 
       - name: Run build
         run: npm run build
+
+  e2e:
+    needs: [docs-only, ci]
+    if: needs.docs-only.outputs.docs_only != 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build app
+        run: npm run build
+
+      - name: Start app
+        run: npm run start &
+      
+      - name: Wait for app
+        run: npx wait-on http://localhost:3000
+
+      - name: Run E2E tests
+        run: npx playwright test
+
