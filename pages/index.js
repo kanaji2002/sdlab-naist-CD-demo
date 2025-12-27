@@ -27,7 +27,7 @@ export default function Home() {
          </tr>
          <tr>
            <td>金地 琳太郎</td>
-           <td>2024/3/27
+           <td>2024/3/2
          </tr>
        </table>      
 </main>
