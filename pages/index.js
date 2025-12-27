@@ -1,17 +1,8 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import { useState } from 'react' // 未使用のインポート（エラー1: no-unused-vars）
 
 export default function Home() {
-  const unusedVar = 'これは使われない' // 未使用の変数（エラー2: no-unused-vars）
-  const result = undefinedFunction() // 定義されていない関数（エラー3: no-undef）
-  
-  // React Hooksのルール違反（エラー4: react-hooks/rules-of-hooks）
-  if (true) {
-    const [count, setCount] = useState(0)
-  }
-
   return (
     <div className="container">
       <Head>
@@ -39,9 +30,7 @@ export default function Home() {
            <td>2024/3/28</td>
          </tr>
        </table>
-       {/* 閉じタグがないJSX（エラー5: 構文エラー） */}
-       
-</main>
+      </main>
       <Footer />
     </div>
   )
