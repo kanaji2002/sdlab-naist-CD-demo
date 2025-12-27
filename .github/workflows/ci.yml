@@ -48,8 +48,6 @@ jobs:
         run: npm run build
 
   e2e:
-    needs: [docs-only, ci]
-    if: needs.docs-only.outputs.docs_only != 'true'
     runs-on: ubuntu-latest
 
     steps:
