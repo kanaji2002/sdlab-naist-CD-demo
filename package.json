@@ -6,12 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.9.4",
     "next": "^16.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "@babel/eslint-parser": "^7.25.0",
+    "@babel/preset-react": "^7.25.0",
+    "@eslint/js": "^9.39.2",
+    "@playwright/test": "^1.57.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.1",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^16.5.0"
   }
 }
