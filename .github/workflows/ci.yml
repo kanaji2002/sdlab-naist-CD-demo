@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-
+      - develop
 
 jobs:
   changes:
@@ -23,8 +23,9 @@ jobs:
               - 'docs/**'
               - 'README.md'
 
-jobs:
   ci:
+    needs: changes
+    if: needs.changes.outputs.docs_only != 'true'
     runs-on: ubuntu-latest
 
     steps:
