@@ -5,7 +5,23 @@ on:
   push:
     branches:
       - main
-      - develop
+
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      docs_only: ${{ steps.filter.outputs.docs_only }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            docs_only:
+              - 'docs/**'
+              - 'README.md'
 
 jobs:
   ci:
